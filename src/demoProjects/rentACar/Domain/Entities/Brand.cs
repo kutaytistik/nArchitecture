@@ -9,6 +9,10 @@ namespace Domain.Entities
 {
     public class Brand : Entity
     {
+        public string Name { get; set; }
+        public virtual ICollection<Model> Models { get; set; }
+
+
         public Brand()
         {
         }
@@ -18,6 +22,6 @@ namespace Domain.Entities
             Id = id;
             Name = name;
         }
-        public string Name { get; set; }
+
     }
 }
